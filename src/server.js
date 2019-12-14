@@ -31,29 +31,29 @@ const optionsLinodeInstance = {
     headers: 
      { 
         'Content-Type': 'application/json',
-       Authorization: 'Bearer 66b533e4ed617ed9308394a3028b1c046a6de02aa10647a9290808befd2d72b8' }
+       Authorization: `Bearer ${LINODE_API_KEY}` }
 }
 const optionsResizeLinodeInstance = {
 method: 'POST',
-url: 'https://api.linode.com/v4/linode/instances/{}/resize',
+url: 'https://api.linode.com/v4/linode/instances/123/resize',
 headers: 
  { 
    'Content-Type': 'application/json',
-   Authorization: 'Bearer 66b533e4ed617ed9308394a3028b1c046a6de02aa10647a9290808befd2d72b8' },
+   Authorization: `Bearer ${LINODE_API_KEY}` },
 body: 
  { 
-     "type": ""
+     "type": "g6-standard-2"
 
 }
 
 }
 const optionsRebootLinodeInstance = {
 method: 'POST',
-url: 'https://api.linode.com/v4/linode/instances/{}/reboot',
+url: 'https://api.linode.com/v4/linode/instances/123/reboot',
 headers: 
  { 
    'Content-Type': 'application/json',
-   Authorization: 'Bearer 66b533e4ed617ed9308394a3028b1c046a6de02aa10647a9290808befd2d72b8' },
+   Authorization: `Bearer ${LINODE_API_KEY}` },
 body: 
  { 
      "config_id": 0
