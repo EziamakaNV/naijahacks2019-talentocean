@@ -6,6 +6,7 @@ const optionsAfricaTalking = {
 };
 const AfricasTalking = require('africastalking')(optionsAfricaTalking);
 const PORT = process.env.PORT || 5000;
+const LINODE_API_KEY = process.env.LINODE_API_KEY || '66b533e4ed617ed9308394a3028b1c046a6de02aa10647a9290808befd2d72b8';
 require('dotenv').config();
 
 const request = require('request');
@@ -15,7 +16,7 @@ url: 'https://api.linode.com/v4/account/credit-card',
 headers: 
  { 
    'Content-Type': 'application/json',
-   Authorization: 'Bearer 66b533e4ed617ed9308394a3028b1c046a6de02aa10647a9290808befd2d72b8' },
+   Authorization: `Bearer ${LINODE_API_KEY}` },
 body: 
  { card_number: '4111111111111111',
    expiry_month: 12,
@@ -165,7 +166,7 @@ app.post('/', new AfricasTalking.USSD((params, next) => {
     
     
     if (params.text === '') {
-        message = "CashBreeze Monitoring and Metrics \n";
+        message = "Talent Ocean Monitoring and Metrics \n";
         message += "1: Add Card \n";
         message += "2: Determine Linode Instance \n";
         message += "3: Scale-up Linode Instance \n";
