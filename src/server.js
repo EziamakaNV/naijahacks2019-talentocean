@@ -42,9 +42,10 @@ headers:
    Authorization: `Bearer ${LINODE_API_KEY}` },
 body: 
  { 
-     "type": "g6-standard-2"
+     type: "g6-standard-2"
 
-}
+},
+json: true
 
 }
 const optionsRebootLinodeInstance = {
@@ -56,9 +57,10 @@ headers:
    Authorization: `Bearer ${LINODE_API_KEY}` },
 body: 
  { 
-     "config_id": 0
+     config_id: 0
 
-}
+},
+json: true
 }
 
 function addCard(){
