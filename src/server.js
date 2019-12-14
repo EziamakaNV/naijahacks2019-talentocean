@@ -35,21 +35,21 @@ const optionsLinodeInstance = {
 }
 const optionsResizeLinodeInstance = {
 method: 'POST',
-url: 'https://api.linode.com/v4/linode/instances/{}/resize',
+url: 'https://api.linode.com/v4/linode/instances/123/resize',
 headers: 
  { 
    'Content-Type': 'application/json',
    Authorization: `Bearer ${LINODE_API_KEY}` },
 body: 
  { 
-     "type": ""
+     "type": "g6-standard-2"
 
 }
 
 }
 const optionsRebootLinodeInstance = {
 method: 'POST',
-url: 'https://api.linode.com/v4/linode/instances/{}/reboot',
+url: 'https://api.linode.com/v4/linode/instances/123/reboot',
 headers: 
  { 
    'Content-Type': 'application/json',
