@@ -92,10 +92,7 @@ let promise = new Promise(function(resolve,reject){
             //Used JSON.parse() to convert response in javascript object
             let bod = JSON.parse(body);
 
-            resolve(`Label: ${bod.data[0].label}\n
-            Image: ${bod.data[0].image}\n
-            Status: ${bod.data[0].status}\n
-            `); 
+            resolve(`${bod.data[0]}`); 
 
             }
 
