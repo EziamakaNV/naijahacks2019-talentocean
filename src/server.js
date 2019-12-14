@@ -91,8 +91,8 @@ let promise = new Promise(function(resolve,reject){
             //body received is in JSON string format
             //Used JSON.parse() to convert response in javascript object
             let bod = JSON.parse(body);
-
-            resolve(`${bod.data[0]}`); 
+            let payload = (bod.data[0] === undefined) ? 'No instance running':  bod.data[0].label
+            resolve(`${payload}`); 
 
             }
 
